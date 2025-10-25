@@ -577,14 +577,14 @@ html {
 
 .footer-sub {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 20px;
     opacity: 0.9;
 }
 
 .footer-title {
     color: #00f6ff;
     margin-bottom: 20px;
-    font-size: 32px;
+    font-size: 39px;
 }
 
 .iconos-contacto {
@@ -597,8 +597,8 @@ html {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
     background: rgba(9, 101, 163, 0.774);
     text-decoration: none;
