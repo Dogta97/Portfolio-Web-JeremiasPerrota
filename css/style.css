@@ -575,19 +575,11 @@ html {
     flex-wrap: wrap;
 }
 
-.footer-title {
-    margin: 0 0 6px 0;
-    font-size: 1.25rem;
-    color: #fff;
-}
-
 .footer-sub {
     margin: 0;
     font-size: 0.95rem;
     opacity: 0.9;
 }
-
-/* Icon container */
 
 .footer-title {
     color: #00f6ff;
