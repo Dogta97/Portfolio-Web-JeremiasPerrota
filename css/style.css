@@ -579,7 +579,7 @@ html {
     color: var(--muted);
     padding: 32px 20px;
     border-top: 3px solid var(--accent);
-    font-family: var(--ff);
+    font-family: 'Nova Mono', monospace;
     text-align: center;
 }
 
