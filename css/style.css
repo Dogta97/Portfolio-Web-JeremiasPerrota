@@ -1,3 +1,16 @@
+@font-face{
+    font-family:'Nova Square';
+    src:url('../fonts/NovaSquare.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'NovaMono';
+    src: url('../fonts/NovaMono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,8 +40,6 @@ body {
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
 }
 
-
-
 .perfil {
     display: flex;
     flex-direction: column;
@@ -49,6 +60,7 @@ body {
     margin-top: 10px;
     color: #fff;
     font-weight: 600;
+    font-family: 'Nova Square', sans-serif;
 }
 
 .redes {
@@ -115,6 +127,7 @@ body {
     padding: 10px 12px;
     border-radius: 8px;
     transition: background 0.3s, color 0.3s;
+    font-family: 'Nova Mono', monospace;
 }
 
 .menu a i {
@@ -184,13 +197,15 @@ html {
 }
 
 .hero-texto h1 {
-    font-size: 50px;
+    font-size: 51px;
     margin-bottom: 10px;
+    font-family: 'Nova Mono', monospace;
 }
 
 .hero-texto h2 {
     font-size: 28px;
     color: #00f6ff;
+    font-family: 'Nova Mono', monospace;
 }
 
 .hero-imagen img {
@@ -253,11 +268,18 @@ html {
 #sobre-mi h2 {
     color: #00f6ff;
     font-size: 35px;
+    font-family: 'Nova Square', sans-serif;
 }
 
 #sobre-mi h3 {
     color: #00f6ff;
     font-size: 25px;
+    font-family: 'Nova Square', sans-serif;
+}
+
+#sobre-mi p{
+    font-family: 'Nova Mono', monospace;
+    font-size: 17px;
 }
 
 .contenedor-sobre-mi {
@@ -298,10 +320,12 @@ html {
 .datos-personales li {
     margin-bottom: 12px;
     line-height: 1.5;
+    font-family: 'Nova Mono', monospace;
 }
 
 .datos-personales li strong {
     color: #00f6ff;
+    font-family: 'Nova Square', sans-serif;
 }
 
 .valores {
@@ -311,7 +335,8 @@ html {
 
 .valores-title {
     color: #00f6ff;
-    font-size: 18px;
+    font-size: 19px;
+    font-family: 'Nova Square', sans-serif;
 }
 
 #skills {
@@ -324,12 +349,22 @@ html {
     color: #00f6ff;
     margin-bottom: 10px;
     font-size: 32px;
+    font-family: 'Nova Square', sans-serif;
 }
 
 .descripcion-skills {
     margin-bottom: 30px;
     max-width: none;
     line-height: 1.6;
+    font-family: 'Nova Mono', monospace;
+    font-size: 17px;
+}
+.descripcion-skillss {
+    margin-bottom: 30px;
+    max-width: none;
+    line-height: 1.6;
+    font-family: 'Nova Mono', monospace;
+    font-size: 18px;
 }
 
 .skills-grid {
@@ -357,6 +392,7 @@ html {
     font-size: 16px;
     font-weight: 500;
     color: #cbd5e1;
+    font-family: 'Nova Mono', monospace;
 }
 
 .skill-item:hover {
@@ -364,8 +400,6 @@ html {
     box-shadow: 0 4px 12px rgb(0, 246, 255, 0.3);
     cursor: pointer;
 }
-
-
 
 .skill-item.in-progress {
     background-color: #ff4d4d;
@@ -393,6 +427,7 @@ html {
     color: #00f6ff;
     margin-bottom: 20px;
     font-size: 32px;
+    font-family: 'Nova Square', sans-serif;
 }
 
 .certificados-grid {
@@ -515,6 +550,7 @@ html {
     color: #00f6ff;
     margin-bottom: 20px;
     font-size: 32px;
+    font-family: 'Nova Square', sans-serif;
 }
 
 
