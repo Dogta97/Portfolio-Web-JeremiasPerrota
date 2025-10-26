@@ -13,7 +13,6 @@ body {
 }
 
 
-/* SIDEBAR */
 .sidebar {
     width: 250px;
     height: 100vh;
@@ -28,7 +27,7 @@ body {
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
 }
 
-/* PERFIL */
+
 
 .perfil {
     display: flex;
@@ -52,7 +51,6 @@ body {
     font-weight: 600;
 }
 
-/* REDES SOCIALES */
 .redes {
     display: flex;
     justify-content: center;
@@ -83,7 +81,7 @@ body {
     background-color: #00f6ff;
 }
 
-/* MENÚ DE NAVEGACIÓN */
+
 .menu {
     margin-top: 30px;
     width: 100%;
@@ -138,7 +136,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ANIMACION FOTO PERFIL SIDEBAR */
 
 .fade-in {
     opacity: 0;
@@ -153,14 +150,11 @@ html {
     }
 }
 
-/* CONTENIDO PRINCIPAL */
 .contenido {
     margin-left: 250px;
     padding: 30px;
     width: calc(100% - 250px);
 }
-
-/* FONDO TAPABLE CON SCROLL, CON TITULOS */
 
 .hero {
     margin-left: 250px;
@@ -219,7 +213,7 @@ html {
 }
 
 
-/*SECCION DE CAMBIO DE TIPEO*/
+
 .typed-text {
     font-size: 22px;
     margin-top: 15px;
@@ -249,7 +243,6 @@ html {
     }
 }
 
-/* SECCION SOBRE MI */
 
 #sobre-mi {
     padding: 40px;
@@ -321,8 +314,6 @@ html {
     font-size: 18px;
 }
 
-/* SECCION DE HABILIDADES/LENGUAJES */
-
 #skills {
     padding: 40px;
     margin-left: 250px;
@@ -374,7 +365,7 @@ html {
     cursor: pointer;
 }
 
-/* HABILIDAD EN PROCESO */
+
 
 .skill-item.in-progress {
     background-color: #ff4d4d;
@@ -391,7 +382,6 @@ html {
     cursor: pointer;
 }
 
-/* SECCION DE CERTIFICADOS */
 
 #certificados {
     padding: 40px;
@@ -408,7 +398,6 @@ html {
 .certificados-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* para que se adapte */
     gap: 25px;
 }
 
@@ -434,11 +423,9 @@ html {
     padding: 10px;
     position: relative;
     max-width: 350px;
-    /* limitar ancho máximo */
     height: 400px;
     aspect-ratio: auto;
     margin: 0 auto;
-    /* centrar */
 }
 
 .certificado-item img {
@@ -447,7 +434,7 @@ html {
     object-fit: contain;
     display: block;
     max-height: 430px;
-    /* para que la imagen no crezca más que el contenedor */
+  
 }
 
 .certificado-item:hover {
@@ -481,7 +468,6 @@ html {
     opacity: 1;
 }
 
-/* LIGHTBOX */
 .lightbox {
     display: flex;
     position: fixed;
@@ -518,9 +504,6 @@ html {
     cursor: pointer;
 }
 
-/* TERMINA SECCION DE CERTIFICADOS */
-
-/* SECCION DE PROYECTOS */
 
 #proyectos {
     padding: 40px;
@@ -534,7 +517,7 @@ html {
     font-size: 32px;
 }
 
-/* Estilo para organizar los videos en columnas */
+
 #proyectos {
     display: flex;
     flex-direction: column;
@@ -543,7 +526,7 @@ html {
 #proyectos .item-container {
     display: flex;
     gap: 20px;
-    /* Espacio entre los videos */
+   
 }
 
 #proyectos .item {
@@ -621,14 +604,73 @@ html {
     border-color: rgba(9, 119, 223, 0.25);
 }
 
-/* Small devices: stack */
-@media (max-width:640px) {
-    .contenedor-footer {
-        flex-direction: column;
-        text-align: center;
-    }
+img, video { max-width: 100%; height: auto; display: block; }
 
-    .iconos-contacto {
-        margin-top: 10px;
-    }
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  z-index: 1200;
+  background: #0b1120;
+  box-shadow: 0 2px 10px rgba(0,0,0,.6);
+}
+
+.perfil h2, .redes { display: none; }
+.menu ul { display: flex; gap: 8px; align-items: center; margin: 0; padding: 0; }
+.menu a { padding: 6px; font-size: 0; }
+
+
+main, .hero, #sobre-mi, #skills, #certificados, #proyectos, footer {
+  padding-top: 72px;
+  transition: padding-top .15s;
+}
+
+
+.hero { padding: 24px; box-sizing: border-box; }
+.hero-content { display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:center; }
+.hero-texto { flex:1 1 280px; min-width:200px; }
+.hero-imagen { flex:1 1 240px; max-width:420px; }
+
+.skills-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:16px; }
+.certificados-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px; }
+
+#proyectos .item-container { display:flex; flex-direction:column; gap:16px; }
+#proyectos .item { width:100%; }
+
+
+@media (min-width: 721px) {
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+
+  .hero, #sobre-mi, #skills, #certificados, #proyectos, footer {
+    margin-left: 250px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .perfil h2, .redes { display: flex; }
+  .menu a { font-size: 16px; padding: 10px 12px; }
+  #proyectos .item-container { flex-direction: row; gap: 20px; }
+  .hero-imagen { max-width: 500px; }
+}
+
+@media (max-width:420px){
+  .hero-texto h1 { font-size: 22px; }
+  .hero-texto h2 { font-size: 14px; }
 }
