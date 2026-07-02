@@ -401,6 +401,22 @@ html {
     cursor: pointer;
 }
 
+.skill-itemmdb {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #1e293b;
+    padding: 12px 16px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.skill-itemmdb:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgb(0, 246, 255, 0.3);
+    cursor: pointer;
+}
+
 .skill-item.in-progress {
     background-color: #ff4d4d;
     color: #fff;
@@ -412,7 +428,7 @@ html {
 
 .skill-item.in-progress:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(255, 77, 77, 0.25);
+    box-shadow: 0 4px 12px rgb(0, 246, 255, 0.3);
     cursor: pointer;
 }
 
