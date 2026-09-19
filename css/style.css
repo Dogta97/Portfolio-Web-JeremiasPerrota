@@ -1118,70 +1118,126 @@ html {
     }
 }
 
+/*FOOTER / CONTACTO*/
+
 .footer-contacto {
     background: var(--bg-footer);
     color: var(--muted);
+
     padding: 32px 20px;
+
     border-top: 3px solid var(--accent);
+
     font-family: 'Nova Square', sans-serif;
+
     text-align: center;
 }
 
 .contenedor-footer {
     max-width: 1100px;
+
     margin: 0 auto;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 18px;
+
     padding: 8px 16px;
+
     flex-wrap: wrap;
+}
+
+
+/* TEXTO */
+
+.footer-title {
+    color: #00f6ff;
+
+    margin-bottom: 20px;
+
+    font-size: 39px;
 }
 
 .footer-sub {
     margin: 0;
+
     font-size: 19px;
+
     font-family: 'Nova Mono', monospace;
 }
 
-.footer-title {
-    color: #00f6ff;
-    margin-bottom: 20px;
-    font-size: 39px;
-}
+
+/* ICONOS */
 
 .iconos-contacto {
     display: flex;
+
     gap: 18px;
+
     align-items: center;
 }
 
 .contact-link {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
+
     width: 60px;
     height: 60px;
+
     border-radius: 10px;
+
     background: rgba(9, 101, 163, 0.774);
+
     text-decoration: none;
+
     color: var(--muted);
+
     font-size: 1.25rem;
-    transition: transform .18s ease, background .18s ease, color .18s ease;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        color 0.18s ease,
+        border-color 0.18s ease;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.35);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.03);
 }
 
-.contact-link:focus {
-    outline: 3px solid rgba(12, 175, 224, 0.18);
-    outline-offset: 4px;
-}
+
+/* HOVER */
 
 .contact-link:hover {
     transform: translateY(-4px) scale(1.05);
+
     color: white;
-    background: linear-gradient(180deg, rgba(75, 195, 243, 0.08), rgba(17, 0, 255, 0.02));
-    border-color: rgba(9, 119, 223, 0.25);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(75, 195, 243, 0.08),
+            rgba(17, 0, 255, 0.02)
+        );
+
+    border-color:
+        rgba(9, 119, 223, 0.25);
+}
+
+
+/* ACCESIBILIDAD CON TECLADO */
+
+.contact-link:focus {
+    outline:
+        3px solid rgba(12, 175, 224, 0.18);
+
+    outline-offset: 4px;
 }
 
 @media (max-width: 768px) {
