@@ -240,3 +240,321 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// CARRUSEL + LIGHTBOX DE IMÁGENES - SHIPNOW //
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // ELEMENTOS DEL CARRUSEL NORMAL //
+
+  const carousel = document.querySelector(".shipnow-carousel");
+
+  if (!carousel) return;
+
+  const slides = carousel.querySelectorAll(".shipnow-slide");
+
+  const dots = carousel.querySelectorAll(".shipnow-dot");
+
+  const prevBtn = carousel.querySelector(".shipnow-prev");
+
+  const nextBtn = carousel.querySelector(".shipnow-next");
+
+  // ELEMENTOS DEL LIGHTBOX //
+
+  const lightbox = document.getElementById("shipnow-lightbox");
+
+  const lightboxImg =
+    lightbox.querySelector(".shipnow-lightbox-img");
+
+  const lightboxCerrar =
+    lightbox.querySelector(".shipnow-lightbox-cerrar");
+
+  const lightboxPrev =
+    lightbox.querySelector(".shipnow-lightbox-prev");
+
+  const lightboxNext =
+    lightbox.querySelector(".shipnow-lightbox-next");
+
+  const lightboxDots =
+    lightbox.querySelectorAll(".shipnow-lightbox-dot");
+
+  // ESTADO DEL CARRUSEL //
+
+  let currentSlide = 0;
+
+  // NORMALIZAR ÍNDICE //
+
+  function normalizarIndice(index) {
+
+    if (index >= slides.length) {
+      return 0;
+    }
+
+    if (index < 0) {
+      return slides.length - 1;
+    }
+
+    return index;
+  }
+
+  // MOSTRAR SLIDE EN EL CARRUSEL NORMAL //
+
+  function mostrarSlide(index) {
+
+    currentSlide = normalizarIndice(index);
+
+
+    // DESACTIVAR SLIDES
+
+    slides.forEach((slide) => {
+      slide.classList.remove("activo");
+    });
+
+
+    // DESACTIVAR INDICADORES
+
+    dots.forEach((dot) => {
+      dot.classList.remove("activo");
+    });
+
+
+    // ACTIVAR SLIDE ACTUAL
+
+    slides[currentSlide].classList.add("activo");
+
+
+    // ACTIVAR INDICADOR ACTUAL
+
+    if (dots[currentSlide]) {
+      dots[currentSlide].classList.add("activo");
+    }
+
+
+    // SI EL LIGHTBOX ESTÁ ABIERTO,
+    // TAMBIÉN ACTUALIZAR SU IMAGEN
+
+    if (lightbox.classList.contains("visible")) {
+      actualizarLightbox();
+    }
+  }
+
+  // ACTUALIZAR IMAGEN DEL LIGHTBOX //
+
+  function actualizarLightbox() {
+
+    const imagenActual =
+      slides[currentSlide].querySelector("img");
+
+    if (!imagenActual) return;
+
+
+    // REINICIAR ANIMACIÓN
+
+    lightboxImg.style.animation = "none";
+
+    void lightboxImg.offsetWidth;
+
+    lightboxImg.style.animation = "";
+
+
+    // ACTUALIZAR IMAGEN
+
+    lightboxImg.src = imagenActual.src;
+
+    lightboxImg.alt = imagenActual.alt;
+
+
+    // ACTUALIZAR INDICADORES
+
+    lightboxDots.forEach((dot) => {
+      dot.classList.remove("activo");
+    });
+
+
+    if (lightboxDots[currentSlide]) {
+      lightboxDots[currentSlide].classList.add("activo");
+    }
+  }
+
+  // ABRIR LIGHTBOX //
+
+  function abrirLightbox(index) {
+
+    currentSlide = normalizarIndice(index);
+
+    mostrarSlide(currentSlide);
+
+    actualizarLightbox();
+
+    lightbox.classList.add("visible");
+
+
+    // EVITAR QUE LA PÁGINA SE MUEVA DETRÁS
+
+    document.body.style.overflow = "hidden";
+  }
+
+  // CERRAR LIGHTBOX //
+
+
+  function cerrarLightbox() {
+
+    lightbox.classList.remove("visible");
+
+    document.body.style.overflow = "";
+  }
+
+  // FLECHAS DEL CARRUSEL NORMAL //
+
+  nextBtn.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    mostrarSlide(currentSlide + 1);
+
+  });
+
+
+  prevBtn.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    mostrarSlide(currentSlide - 1);
+
+  });
+
+
+  // INDICADORES DEL CARRUSEL NORMAL //
+
+  dots.forEach((dot) => {
+
+    dot.addEventListener("click", (e) => {
+
+      e.stopPropagation();
+
+      const index = Number(dot.dataset.slide);
+
+      mostrarSlide(index);
+
+    });
+
+  });
+
+  // ABRIR LIGHTBOX AL HACER CLIC EN UNA IMAGEN //
+
+  slides.forEach((slide, index) => {
+
+    const imagen = slide.querySelector("img");
+
+    if (!imagen) return;
+
+
+    imagen.addEventListener("click", () => {
+
+      abrirLightbox(index);
+
+    });
+
+  });
+
+  // FLECHA DERECHA DEL LIGHTBOX//
+
+  lightboxNext.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    mostrarSlide(currentSlide + 1);
+
+  });
+
+  // FLECHA IZQUIERDA DEL LIGHTBOX//
+
+  lightboxPrev.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    mostrarSlide(currentSlide - 1);
+
+  });
+
+  // INDICADORES DEL LIGHTBOX //
+
+  lightboxDots.forEach((dot) => {
+
+    dot.addEventListener("click", (e) => {
+
+      e.stopPropagation();
+
+      const index = Number(dot.dataset.slide);
+
+      mostrarSlide(index);
+
+    });
+
+  });
+
+  // BOTÓN X//
+  lightboxCerrar.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    cerrarLightbox();
+
+  });
+
+  // CERRAR HACIENDO CLIC EN EL FONDO//
+
+  lightbox.addEventListener("click", (e) => {
+
+    if (e.target === lightbox) {
+
+      cerrarLightbox();
+
+    }
+
+  });
+
+
+  // CONTROLES DE TECLADO//
+
+  document.addEventListener("keydown", (e) => {
+
+    if (!lightbox.classList.contains("visible")) {
+      return;
+    }
+
+
+    // ESCAPE = CERRAR
+
+    if (e.key === "Escape") {
+
+      cerrarLightbox();
+
+    }
+
+
+    // FLECHA DERECHA = SIGUIENTE
+
+    else if (e.key === "ArrowRight") {
+
+      mostrarSlide(currentSlide + 1);
+
+    }
+
+
+    // FLECHA IZQUIERDA = ANTERIOR
+
+    else if (e.key === "ArrowLeft") {
+
+      mostrarSlide(currentSlide - 1);
+
+    }
+
+  });
+
+
+  // INICIAR CARRUSEL//
+
+  mostrarSlide(0);
+
+});

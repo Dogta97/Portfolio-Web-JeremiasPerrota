@@ -582,22 +582,145 @@
   </p>
 
 
-<!-- PROYECTO DESTACADO -->
+<!--PROYECTO DESTACADO - SHIPNOW-->
 
-  <h3 class="proyectos-subtitulo">Proyecto destacado</h3>
+<h3 class="proyectos-subtitulo">Proyecto destacado</h3>
 
-  <article class="proyecto-destacado">
+<article class="proyecto-destacado">
+
+  <!--CARRUSEL DE IMÁGENES SHIPNOW-->
 
   <div class="proyecto-destacado-imagen">
-    <img
-      src="./images/ShipNow.png"
-      alt="Documentación Swagger de ShipNow API"
-    />
+
+    <div class="shipnow-carousel">
+
+      <div class="shipnow-carousel-track">
+
+        <!-- IMAGEN 1 -->
+        <div class="shipnow-slide">
+          <img
+            src="./images/ShipNow.png"
+            alt="ShipNow API - Endpoints Swagger"
+          />
+        </div>
+
+        <!-- IMAGEN 2 -->
+        <div class="shipnow-slide">
+          <img
+            src="./images/ShipNow 2.png"
+            alt="ShipNow API - Vista del proyecto"
+          />
+        </div>
+
+        <!-- IMAGEN 3 -->
+        <div class="shipnow-slide">
+          <img
+            src="./images/ShipNow 3.png"
+            alt="ShipNow API - Testing"
+          />
+        </div>
+
+        <!-- IMAGEN 4 -->
+        <div class="shipnow-slide">
+          <img
+            src="./images/ShipNow 4.png"
+            alt="ShipNow API - Desarrollo Backend"
+          />
+        </div>
+
+        <!-- IMAGEN 5 -->
+        <div class="shipnow-slide">
+          <img
+            src="./images/ShipNow 5.png"
+            alt="ShipNow API - Proyecto Backend"
+          />
+        </div>
+
+      </div>
+
+
+      <!-- FLECHA IZQUIERDA -->
+
+      <button
+        class="shipnow-carousel-btn shipnow-prev"
+        type="button"
+        aria-label="Imagen anterior"
+      >
+        &#10094;
+      </button>
+
+
+      <!-- FLECHA DERECHA -->
+
+      <button
+        class="shipnow-carousel-btn shipnow-next"
+        type="button"
+        aria-label="Imagen siguiente"
+      >
+        &#10095;
+      </button>
+
+
+      <!-- INDICADORES -->
+
+      <div class="shipnow-carousel-indicadores">
+
+        <button
+          class="shipnow-dot activo"
+          type="button"
+          data-slide="0"
+          aria-label="Ver imagen 1"
+        ></button>
+
+        <button
+          class="shipnow-dot"
+          type="button"
+          data-slide="1"
+          aria-label="Ver imagen 2"
+        ></button>
+
+        <button
+          class="shipnow-dot"
+          type="button"
+          data-slide="2"
+          aria-label="Ver imagen 3"
+        ></button>
+
+        <button
+          class="shipnow-dot"
+          type="button"
+          data-slide="3"
+          aria-label="Ver imagen 4"
+        ></button>
+
+        <button
+          class="shipnow-dot"
+          type="button"
+          data-slide="4"
+          aria-label="Ver imagen 5"
+        ></button>
+
+        <button
+          class="shipnow-dot"
+          type="button"
+          data-slide="5"
+          aria-label="Ver imagen 6"
+        ></button>
+
+      </div>
+
+    </div>
+
   </div>
+
+
+  <!--INFORMACIÓN DEL PROYECTO-->
 
   <div class="proyecto-destacado-info">
 
-    <span class="proyecto-tipo">BACKEND REST API</span>
+    <span class="proyecto-tipo">
+      BACKEND REST API
+    </span>
 
     <h4>ShipNow API</h4>
 
@@ -613,7 +736,11 @@
       filtros, generación de datos simulados y contenerización con Docker.
     </p>
 
+
+    <!-- TECNOLOGÍAS -->
+
     <div class="proyecto-tecnologias">
+
       <span>Node.js</span>
       <span>Express</span>
       <span>MongoDB</span>
@@ -623,18 +750,28 @@
       <span>Mocha</span>
       <span>Chai</span>
       <span>Supertest</span>
+
     </div>
 
+
+    <!-- CARACTERÍSTICAS -->
+
     <ul class="proyecto-caracteristicas">
+
       <li>✓ 40 tests funcionales</li>
       <li>✓ Arquitectura por capas</li>
       <li>✓ Repository Pattern</li>
       <li>✓ Docker + Docker Compose</li>
       <li>✓ Swagger / OpenAPI</li>
       <li>✓ Logging con Winston</li>
+
     </ul>
 
+
+    <!-- GITHUB -->
+
     <div class="proyecto-links">
+
       <a
         href="https://github.com/Dogta97/ShipNow---Backend-III"
         target="_blank"
@@ -643,11 +780,119 @@
       >
         Ver código en GitHub
       </a>
+
     </div>
 
   </div>
 
 </article>
+
+
+<!--LIGHTBOX / CARRUSEL AMPLIADO SHIPNOW-->
+
+<div
+  id="shipnow-lightbox"
+  class="shipnow-lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Galería de imágenes de ShipNow"
+>
+
+  <!-- CERRAR -->
+
+  <button
+    class="shipnow-lightbox-cerrar"
+    type="button"
+    aria-label="Cerrar galería"
+  >
+    &times;
+  </button>
+
+
+  <!-- FLECHA IZQUIERDA -->
+
+  <button
+    class="shipnow-lightbox-btn shipnow-lightbox-prev"
+    type="button"
+    aria-label="Imagen anterior"
+  >
+    &#10094;
+  </button>
+
+
+  <!-- IMAGEN AMPLIADA -->
+
+  <div class="shipnow-lightbox-contenido">
+
+    <img
+      class="shipnow-lightbox-img"
+      src=""
+      alt="Captura ampliada de ShipNow API"
+    />
+
+
+    <!-- INDICADORES DEL LIGHTBOX -->
+
+    <div class="shipnow-lightbox-indicadores">
+
+      <button
+        class="shipnow-lightbox-dot"
+        type="button"
+        data-slide="0"
+        aria-label="Ver imagen 1"
+      ></button>
+
+      <button
+        class="shipnow-lightbox-dot"
+        type="button"
+        data-slide="1"
+        aria-label="Ver imagen 2"
+      ></button>
+
+      <button
+        class="shipnow-lightbox-dot"
+        type="button"
+        data-slide="2"
+        aria-label="Ver imagen 3"
+      ></button>
+
+      <button
+        class="shipnow-lightbox-dot"
+        type="button"
+        data-slide="3"
+        aria-label="Ver imagen 4"
+      ></button>
+
+      <button
+        class="shipnow-lightbox-dot"
+        type="button"
+        data-slide="4"
+        aria-label="Ver imagen 5"
+      ></button>
+
+      <button
+        class="shipnow-lightbox-dot"
+        type="button"
+        data-slide="5"
+        aria-label="Ver imagen 6"
+      ></button>
+
+    </div>
+
+  </div>
+
+
+  <!-- FLECHA DERECHA -->
+
+  <button
+    class="shipnow-lightbox-btn shipnow-lightbox-next"
+    type="button"
+    aria-label="Imagen siguiente"
+  >
+    &#10095;
+  </button>
+
+</div>
 
 
 <!-- PROYECTO SQL -->
