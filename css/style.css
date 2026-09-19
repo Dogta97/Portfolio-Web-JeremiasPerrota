@@ -426,6 +426,8 @@ html {
     margin-bottom: 15px;
 }
 
+/*CERTIFICADOS*/
+
 #certificados {
     padding: 40px;
     margin-left: 250px;
@@ -434,120 +436,325 @@ html {
 
 #certificados h2 {
     color: #00f6ff;
-    margin-bottom: 20px;
-    font-size: 32px;
+    margin-bottom: 10px;
+    font-size: 40px;
     font-family: 'Nova Square', sans-serif;
 }
 
+
+/*DESCRIPCIÓN DE LA SECCIÓN*/
+
+.descripcion-certificados {
+    font-family: 'Nova Mono', monospace;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 40px;
+    max-width: 1200px;
+}
+
+
+/*CATEGORÍAS*/
+
+.certificados-categoria {
+    margin-bottom: 50px;
+}
+
+.certificados-categoria h3 {
+    color: #00f6ff;
+    font-family: 'Nova Square', sans-serif;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+
+/*GRID DE CERTIFICADOS*/
+
 .certificados-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
 }
 
-.certificado {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+
+/*TARJETA DEL CERTIFICADO*/
+
+.certificado-card {
+    background-color: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+
+    border: 1px solid rgba(0, 246, 255, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.certificado:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+.certificado-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 7px 20px rgba(0, 246, 255, 0.16);
+
+    border-color: rgba(0, 246, 255, 0.35);
 }
+
+
+/*CONTENEDOR DE LA IMAGEN*/
 
 .certificado-item {
+    position: relative;
+
+    width: 100%;
+    height: 260px;
+
+    padding: 12px;
+
     background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    position: relative;
-    max-width: 350px;
-    height: 400px;
-    aspect-ratio: auto;
-    margin: 0 auto;
+
+    overflow: hidden;
+
+    cursor: zoom-in;
 }
+
+
+/*IMAGEN DEL CERTIFICADO*/
 
 .certificado-item img {
     width: 100%;
-    max-height: 100%;
+    height: 100%;
+
     object-fit: contain;
+
     display: block;
-    max-height: 430px;
-  
+
+    transition: transform 0.3s ease;
 }
 
-.certificado-item:hover {
-    box-shadow: 0 6px 16px rgba(0, 233, 241, 0.473);
+.certificado-card:hover .certificado-item img {
+    transform: scale(1.02);
 }
+
+
+/*ICONO DE ZOOM +*/
 
 .zoom-icon {
     position: absolute;
+
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%);
-    font-size: 36px;
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-    width: 60px;
-    height: 60px;
+
+    width: 55px;
+    height: 55px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: rgba(15, 23, 42, 0.88);
+
+    color: #00f6ff;
+
+    border: 1px solid rgba(0, 246, 255, 0.5);
+
     border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s;
-    cursor: zoom-in;
-    z-index: 2;
-    line-height: 0;
-    padding-top: 2px;
+
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    line-height: 1;
+
+    opacity: 0;
+
+    cursor: zoom-in;
+
+    z-index: 2;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .certificado-item:hover .zoom-icon {
     opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+    box-shadow:
+        0 0 15px rgba(0, 246, 255, 0.3);
 }
 
+
+/*INFORMACIÓN DEBAJO DEL CERTIFICADO*/
+
+.certificado-info {
+    padding: 16px 18px 18px;
+}
+
+.certificado-info h4 {
+    color: #ffffff;
+
+    font-family: 'Nova Square', sans-serif;
+
+    font-size: 16px;
+    line-height: 1.4;
+
+    margin: 0 0 7px 0;
+}
+
+.certificado-info p {
+    color: #00f6ff;
+
+    font-family: 'Nova Mono', monospace;
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/*LIGHTBOX*/
+
 .lightbox {
-    display: flex;
     position: fixed;
-    z-index: 9999;
+
     top: 0;
     left: 0;
+
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.85);
+
+    background-color: rgba(0, 0, 0, 0.92);
+
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    z-index: 9999;
+
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.9s ease;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
 }
+
+
+/*LIGHTBOX VISIBLE */
 
 #lightbox.visible {
     opacity: 1;
     visibility: visible;
 }
 
+
+/*IMAGEN AMPLIADA*/
+
 .lightbox-img {
     max-width: 90%;
-    max-height: 90%;
+    max-height: 88vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
     border-radius: 10px;
+
+    box-shadow:
+        0 0 30px rgba(0, 246, 255, 0.18);
 }
+
+
+/*BOTÓN CERRAR LIGHTBOX*/
 
 .lightbox .cerrar {
     position: absolute;
+
     top: 25px;
     right: 35px;
-    font-size: 40px;
-    color: white;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 45px;
+    line-height: 1;
+
     cursor: pointer;
+
+    z-index: 10000;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
+.lightbox .cerrar:hover {
+    color: #00f6ff;
+
+    transform: scale(1.1);
+}
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 1200px) {
+
+    .certificados-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .certificados-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .certificado-item {
+        height: 250px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .certificados-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificado-item {
+        height: 240px;
+    }
+
+    .certificados-categoria {
+        margin-bottom: 40px;
+    }
+
+    .certificados-categoria h3 {
+        font-size: 20px;
+    }
+
+    .lightbox .cerrar {
+        top: 15px;
+        right: 20px;
+        font-size: 38px;
+    }
+}
 
 /*PROYECTOS*/
 
