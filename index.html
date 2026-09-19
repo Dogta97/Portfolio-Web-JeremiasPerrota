@@ -85,18 +85,33 @@
         <!--DATOS PERSONALES-->
         <div class="datos-dos-columnas">
           <ul class="datos-personales">
-            <li><strong>Fecha de nacimiento:</strong> 13 de Marzo - 1997</li>
             <li><strong>Teléfono:</strong> 2254413281</li>
             <li><strong>Email:</strong> jperrota13@gmail.com</li>
-            <li><strong>Edad:</strong> 29 años</li>
+            <li><strong>Ciudad:</strong> Avellaneda, Buenos Aires, Argentina</li>
           </ul>
 
           <ul class="datos-personales">
-            <li><strong>Ciudad:</strong> Avellaneda, Buenos Aires, Argentina</li>
-            <li><strong>Disponibilidad:</strong> Inmediata</li>
-            <li><strong>Hobby:</strong> Aprender nuevas tecnologías, Gym, Libros</li>
-            <li><strong>Inglés:</strong> Intermedio (Estudiando)</li>
-          </ul>
+  <li><strong>Disponibilidad:</strong> Inmediata</li>
+  <li><strong>Inglés:</strong> Intermedio (Estudiando)</li>
+
+  <li>
+    <strong>GitHub:</strong>
+    <a href="https://github.com/Dogta97"
+       target="_blank"
+       rel="noopener noreferrer">
+      Dogta97
+    </a>
+  </li>
+
+  <li>
+    <strong>LinkedIn:</strong>
+    <a href="https://www.linkedin.com/in/jerem%C3%ADas-perrota-10891521b/"
+       target="_blank"
+       rel="noopener noreferrer">
+      Jeremías Perrota
+    </a>
+  </li>
+</ul>
         </div>
         <br>
         <br>
@@ -359,21 +374,249 @@
     <img class="lightbox-img" src="" alt="Certificado ampliado">
   </div>
 
-  <!--SECCION DE VIDEOS DE PROYECTOS-->
-  <section id="proyectos">
+  <!-- SECCIÓN DE PROYECTOS -->
+<section id="proyectos">
+
   <h2>Proyectos</h2>
-  <p class="descripcion-skillss">Estos son algunos de los proyectos que hice por mi cuenta, así como trabajos para mis cursos.</p>
-  <div class="item-container">
-    <div class="item">
-      <video src="./images/WorkoutTimer.mp4" muted autoplay loop></video>
+
+  <p class="descripcion-skillss">
+    Estos son algunos de los proyectos que desarrollé durante mi formación
+    y de manera independiente, aplicando diferentes tecnologías y conceptos
+    de desarrollo Backend, bases de datos y desarrollo web.
+  </p>
+
+
+<!-- PROYECTO DESTACADO -->
+
+  <h3 class="proyectos-subtitulo">Proyecto destacado</h3>
+
+  <article class="proyecto-destacado">
+
+    <div class="proyecto-destacado-imagen">
+      <img
+        src="./images/shipnow-swagger.png"
+        alt="Documentación Swagger de ShipNow API"
+      />
     </div>
-    <div class="item">
-      <video src="./images/PaginadeReseñas.mp4" muted autoplay loop></video>
+
+    <div class="proyecto-destacado-info">
+
+      <span class="proyecto-tipo">BACKEND REST API</span>
+
+      <h4>ShipNow API</h4>
+
+      <p>
+        API REST para gestión logística desarrollada con Node.js, Express
+        y MongoDB. Permite administrar usuarios, productos, pedidos y envíos
+        mediante una arquitectura profesional por capas.
+      </p>
+
+      <p>
+        El proyecto implementa Repository Pattern, manejo global de errores,
+        logging con Winston, documentación Swagger/OpenAPI, uploads con Multer,
+        paginación, filtros y contenerización con Docker.
+      </p>
+
+      <div class="proyecto-tecnologias">
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>MongoDB</span>
+        <span>Mongoose</span>
+        <span>Docker</span>
+        <span>Swagger</span>
+      </div>
+
+      <ul class="proyecto-caracteristicas">
+        <li>✓ 40 tests funcionales</li>
+        <li>✓ Arquitectura por capas</li>
+        <li>✓ Docker + Docker Compose</li>
+        <li>✓ Swagger / OpenAPI</li>
+      </ul>
+
+      <div class="proyecto-links">
+        <a
+          href="https://github.com/Dogta97/ShipNow---Backend-III"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="proyecto-btn"
+        >
+          Ver código en GitHub
+        </a>
+      </div>
+
     </div>
-    <div class="item">
-      <video src="./images/ConversordeMonedas.mp4" muted autoplay loop></video>
+
+  </article>
+
+
+<!-- PROYECTO SQL -->
+
+  <h3 class="proyectos-subtitulo">Bases de datos</h3>
+
+  <article class="proyecto-sql">
+
+    <div class="proyecto-sql-info">
+
+      <span class="proyecto-tipo">SQL · MYSQL · MODELADO RELACIONAL</span>
+
+      <h4>Tienda Online — Base de datos SQL</h4>
+
+      <p>
+        Diseño y desarrollo de una base de datos relacional para la gestión
+        de productos, categorías, proveedores, clientes, empleados y ventas.
+        El proyecto incluye relaciones entre entidades, vistas, funciones,
+        procedimientos almacenados y triggers.
+      </p>
+
+      <div class="proyecto-tecnologias">
+        <span>SQL</span>
+        <span>MySQL</span>
+        <span>DER</span>
+        <span>Triggers</span>
+        <span>Stored Procedures</span>
+      </div>
+
+      <div class="proyecto-links">
+        <a
+          href="https://drive.google.com/drive/folders/1om4vy__6asA_dzgSBvWSFz4kU7mtZsp7?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="proyecto-btn proyecto-btn-secundario"
+        >
+          Ver Drive
+        </a>
+      </div>
+
     </div>
+
+  </article>
+
+  <!-- OTROS PROYECTOS -->
+
+  <h3 class="proyectos-subtitulo">Otros proyectos</h3>
+
+  <div class="otros-proyectos-grid">
+
+
+    <!-- WORKOUT TIMER -->
+
+    <article class="proyecto-card">
+
+      <video
+        src="./images/WorkoutTimer.mp4"
+        muted
+        autoplay
+        loop
+        playsinline>
+      </video>
+
+      <div class="proyecto-card-info">
+
+        <h4>Workout Timer</h4>
+
+        <p>
+          Temporizador desarrollado con JavaScript para practicar manipulación
+          del DOM, eventos y manejo de intervalos de tiempo.
+        </p>
+
+        <div class="proyecto-tecnologias">
+          <span>JavaScript</span>
+          <span>DOM</span>
+          <span>Timers</span>
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- PÁGINA DE RESEÑAS -->
+
+    <article class="proyecto-card">
+
+      <video
+        src="./images/PaginadeReseñas.mp4"
+        muted
+        autoplay
+        loop
+        playsinline>
+      </video>
+
+      <div class="proyecto-card-info">
+
+        <h4>Página de Reseñas</h4>
+
+        <p>
+          Proyecto web desarrollado para practicar estructura, diseño,
+          interacción con JavaScript y manipulación dinámica del contenido.
+        </p>
+
+        <div class="proyecto-tecnologias">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>DOM</span>
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- CONVERSOR -->
+
+    <article class="proyecto-card">
+
+      <video
+        src="./images/ConversordeMonedas.mp4"
+        muted
+        autoplay
+        loop
+        playsinline>
+      </video>
+
+      <div class="proyecto-card-info">
+
+        <h4>Conversor de Monedas</h4>
+
+        <p>
+          Aplicación desarrollada con JavaScript que consume información
+          externa para realizar conversiones de monedas y gestionar
+          interacciones dinámicas con el usuario.
+        </p>
+
+        <div class="proyecto-tecnologias">
+          <span>JavaScript</span>
+          <span>REST API</span>
+          <span>Async / Await</span>
+        </div>
+
+      </div>
+
+    </article>
+
   </div>
+
+
+  <!-- GITHUB GENERAL -->
+
+  <div class="github-proyectos">
+
+    <p>
+      Podés encontrar estos y otros proyectos en mi perfil de GitHub.
+    </p>
+
+    <a
+      href="https://github.com/Dogta97"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="proyecto-btn"
+    >
+      Ver todos mis repositorios
+    </a>
+
+  </div>
+
 </section>
 
 <footer id="contacto" class="footer-contacto">
